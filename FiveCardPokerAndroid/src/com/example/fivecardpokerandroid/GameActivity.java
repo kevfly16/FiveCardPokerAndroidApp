@@ -117,7 +117,6 @@ public class GameActivity extends Activity {
 		@Override
 		public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
 			bid = (bidSeekBar.getProgress()) * 5;
-			System.out.print(bid);
 			valueOfBid.setText(bid + "");
 		}
 
