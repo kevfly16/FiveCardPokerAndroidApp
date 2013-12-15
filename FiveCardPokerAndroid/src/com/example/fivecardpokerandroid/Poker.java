@@ -100,7 +100,6 @@ public class Poker {
 		// pairs Player
 		for (int i = 1; i < 52; i += 4)
 			if (pair(playerHand, i)) {
-				System.out.println("Player Pair");
 				numberPairPlayer = i;
 				pairPlayer = true;
 				nothingPlayer = false;
@@ -110,7 +109,6 @@ public class Poker {
 		// pairs Banker
 		for (int i = 1; i < 52; i += 4)
 			if (pair(bankerHand, i)) {
-				System.out.println("Banker Pair");
 				numberPairBanker = i;
 				pairBanker = true;
 				nothingBanker = false;
