@@ -148,7 +148,7 @@
         android:src="@drawable/b1fv" />
 
     <TextView
-        android:id="@+id/outcomeTextView"
+        android:id="@+id/instructionsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/imageView1"
@@ -177,12 +177,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/bidSeekBar"
-        android:layout_below="@+id/purseTextView"
+        android:layout_below="@+id/descriptionTextView"
         android:layout_marginTop="22dp"
         android:src="@drawable/b1fv" />
 
     <TextView
-        android:id="@+id/purseTextView"
+        android:id="@+id/descriptionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -194,7 +194,7 @@
         android:id="@+id/imageView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/purseTextView"
+        android:layout_alignBottom="@+id/descriptionTextView"
         android:layout_alignRight="@+id/card1"
         android:src="@drawable/poker_chips" />
 

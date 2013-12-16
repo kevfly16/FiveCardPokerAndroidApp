@@ -73,8 +73,8 @@ public class GameActivity extends Activity {
 
 		valueOfBid = (TextView) findViewById(R.id.valueOfBid);
 
-		outcomeTextView = (TextView) findViewById(R.id.outcomeTextView);
-		purseTextView = (TextView) findViewById(R.id.purseTextView);
+		outcomeTextView = (TextView) findViewById(R.id.instructionsTextView);
+		purseTextView = (TextView) findViewById(R.id.descriptionTextView);
 
 		bidSeekBar = (SeekBar) findViewById(R.id.bidSeekBar);
 		bidSeekBar.setOnSeekBarChangeListener(bidSeekBarListener);
