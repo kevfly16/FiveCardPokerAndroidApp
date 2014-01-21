@@ -174,6 +174,7 @@ public class Poker {
 					else
 						numberFullHousePlayer = j;
 					fullHousePlayer = true;
+					doublePairPlayer = false;
 					triplePlayer = false;
 					pairPlayer = false;
 					nothingPlayer = false;
@@ -192,6 +193,7 @@ public class Poker {
 					else
 						numberFullHouseBanker = j;
 					fullHouseBanker = true;
+					doublePairBanker = false;
 					tripleBanker = false;
 					pairBanker = false;
 					nothingBanker = false;
@@ -259,49 +261,35 @@ public class Poker {
 			return 1;
 		else if (nothingPlayer && !nothingBanker)
 			return 2;
-		else if (pairPlayer && pairBanker && !doublePairPlayer
-				&& !doublePairBanker && !fullHousePlayer && !fullHouseBanker
-				&& !triplePlayer && !tripleBanker && !bombPlayer && !bombBanker)
+		else if (pairPlayer && pairBanker)
 			return (numberPairPlayer < numberPairBanker) ? 1 : 2;
-		else if (pairPlayer && !doublePairPlayer && !fullHousePlayer
-				&& !pairBanker && !triplePlayer && !bombPlayer
-				&& !nothingBanker)
+		else if (pairPlayer)
 			return 2;
-		else if (pairBanker && !doublePairBanker && !fullHouseBanker
-				&& !pairPlayer && !tripleBanker && !bombBanker
-				&& !nothingPlayer)
+		else if (pairBanker)
 			return 1;
-		else if (doublePairPlayer && doublePairBanker && !bombPlayer
-				&& !bombBanker && !fullHousePlayer && !fullHouseBanker)
+		else if (doublePairPlayer && doublePairBanker)
 			return (numberPairPlayer < numberPairBanker) ? 1 : 2;
-		else if (doublePairPlayer && !pairBanker && !fullHousePlayer
-				&& !nothingBanker)
+		else if (doublePairPlayer)
 			return 2;
-		else if (doublePairBanker && !pairPlayer && !fullHouseBanker
-				&& !nothingPlayer)
+		else if (doublePairBanker)
 			return 1;
-		else if (triplePlayer && tripleBanker && !fullHousePlayer
-				&& !fullHouseBanker && !bombPlayer && !bombBanker)
+		else if (triplePlayer && tripleBanker)
 			return (numberTriplePlayer < numberTripleBanker) ? 1 : 2;
-		else if (triplePlayer && !pairBanker && !fullHousePlayer && !bombPlayer
-				&& !doublePairBanker && !nothingBanker)
+		else if (triplePlayer)
 			return 2;
-		else if (tripleBanker && !pairPlayer && !fullHouseBanker && !bombBanker
-				&& !doublePairPlayer && !nothingPlayer)
+		else if (tripleBanker)
 			return 1;
 		else if (straightPlayer && straightBanker)
 			return (numberStraightPlayer < numberStraightBanker) ? 1 : 2;
-		else if (straightPlayer && (flushBanker || bombBanker))
+		else if (straightPlayer)
 			return 2;
-		else if (straightBanker && (flushPlayer || bombPlayer))
+		else if (straightBanker)
 			return 1;
 		else if (flushPlayer && flushBanker)
 			return suit(playerHand, bankerHand);
-		else if (flushPlayer
-				&& ((straightBanker && flushBanker) || bombBanker || fullHouseBanker))
+		else if (flushPlayer)
 			return 2;
-		else if (flushBanker
-				&& ((straightPlayer && flushPlayer) || bombPlayer || fullHousePlayer))
+		else if (flushBanker)
 			return 1;
 		else if (fullHousePlayer && fullHouseBanker)
 			return (numberFullHousePlayer < numberFullHouseBanker) ? 1 : 2;
@@ -316,9 +304,9 @@ public class Poker {
 			return suit(playerHand, bankerHand);
 		else if (bombPlayer && bombBanker)
 			return (numberBombPlayer < numberBombBanker) ? 1 : 2;
-		else if (bombBanker && !bombPlayer && !(straightPlayer && flushPlayer))
+		else if (bombBanker && !(straightPlayer && flushPlayer))
 			return 2;
-		else if (bombPlayer && !bombBanker && !(straightBanker && flushBanker))
+		else if (bombPlayer && !(straightBanker && flushBanker))
 			return 1;
 		else
 			return 0;
