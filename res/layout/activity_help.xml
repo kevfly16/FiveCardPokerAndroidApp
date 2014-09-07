@@ -34,6 +34,6 @@
         android:layout_alignLeft="@+id/instructionsTextView"
         android:layout_below="@+id/instructionsTextView"
         android:layout_marginTop="17dp"
-        android:text="To begin the game the player must place a bid. Following the placement of the bid, the player&apos;s hand is revealed. The player can then choose the cards that they would like to exchange. AFter cards have been excanged, the two player&apos;s hands are revealed. The player with greater ranking poker hand wins that round and a new round begins." />
+        android:text="To begin the game the player must place a bid. Following the placement of the bid, the player&apos;s hand is revealed. The player can then choose the cards that they would like to keep in their hands while the rest are exchanged. After cards have been excanged, the two player&apos;s hands are revealed. The player with the greater ranking poker hand wins that round and a new round begins." />
 
 </RelativeLayout>

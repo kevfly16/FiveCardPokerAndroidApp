@@ -20,13 +20,6 @@ public class HelpActivity extends Activity {
 		setContentView(R.layout.activity_help);
 
 		descriptionTextView = (TextView) findViewById(R.id.descriptionTextView);
-		descriptionTextView
-				.setText("At the beginning of the game you must place a bid and then press continue. "
-						+ "After placing a bid and pressing continue, your cards will be revealed, and you may"
-						+ "choose which ones to hold by placing checks and then clicking hold after having chosen"
-						+ "all cards that you would like to hold. The winner is then determined by comparing the"
-						+ "value of the hands as determined by the rules of Poker. In order to begin the next round"
-						+ "you must press continue and proceed in the same way as mentioned above.");
 		backButton = (Button) findViewById(R.id.backButton);
 		backButton.setOnClickListener(new OnClickListener() {
 
