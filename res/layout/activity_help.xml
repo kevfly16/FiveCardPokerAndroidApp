@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/instructionsTextView"
         android:layout_below="@+id/instructionsTextView"
-        android:layout_marginTop="28dp"
-        android:text="put instructions here!" />
+        android:layout_marginTop="17dp"
+        android:text="To begin the game the player must place a bid. Following the placement of the bid, the player&apos;s hand is revealed. The player can then choose the cards that they would like to exchange. AFter cards have been excanged, the two player&apos;s hands are revealed. The player with greater ranking poker hand wins that round and a new round begins." />
 
 </RelativeLayout>
